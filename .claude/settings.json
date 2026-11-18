@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mycli:*)",
+      "Bash(/opt/homebrew/opt/mysql-client/bin/mysql:*)",
+      "Bash(/usr/local/opt/mysql-client/bin/mysql:*)",
       "Bash(mongosh:*)",
       "Bash(zsh test_connections.sh)",
       "Bash(python3 build_db_map.py)"

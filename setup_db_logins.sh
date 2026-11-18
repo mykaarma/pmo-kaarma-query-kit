@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Builds ~/.my.cnf from "My Credentials.csv" so mycli can connect without
+# Builds ~/.my.cnf from "My Credentials.csv" so the mysql client and pymysql can connect without
 # passwords being typed or shown. Run this yourself; it prints no secrets.
 # One section per cluster: [client_<cluster>], e.g. [client_kaardbprod].
 # Sections not generated from the CSV are kept. Usage: zsh setup_db_logins.sh ["path/to/My Credentials.csv"]
