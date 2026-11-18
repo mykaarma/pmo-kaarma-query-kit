@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mycli:*)",
+      "Bash(mongosh:*)",
+      "Bash(zsh test_connections.sh)",
+      "Bash(python3 build_db_map.py)"
+    ],
+    "deny": [
+      "Read(./My Credentials.csv)",
+      "Read(~/.my.cnf)",
+      "Read(~/.mongo/**)"
+    ]
+  }
+}

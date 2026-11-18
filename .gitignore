@@ -1,0 +1,21 @@
+# --- Never commit credentials ---
+My Credentials.csv
+*Credentials*.csv
+!credentials_template.csv
+*.cnf
+*.uri
+.env*
+
+# --- Never commit data pulled from production ---
+db_map/
+*.xlsx
+*.xls
+*.csv
+!credentials_template.csv
+*.zip
+outputs/
+
+# --- Local / OS ---
+.DS_Store
+__pycache__/
+.claude/settings.local.json
