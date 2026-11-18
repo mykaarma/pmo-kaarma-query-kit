@@ -12,7 +12,11 @@ queries the databases directly, read-only, with **your own** access.
 3. **Homebrew** installed on your Mac (https://brew.sh).
 
 ## 1. Get the kit
-Copy the `db-access-kit` folder to your Mac (for example `~/Documents/db-access-kit`) and open that folder in Claude Code.
+```bash
+mkdir -p ~/Documents/PMO && cd ~/Documents/PMO && git clone https://github.com/mykaarma/pmo-kaarma-query-kit.git
+```
+Then open `~/Documents/PMO/pmo-kaarma-query-kit` in Claude Code. (No access? Ask Abhimanyu to add you to the repo.)
+To get the latest improvements later: `git pull` in that folder.
 Claude reads `CLAUDE.md` there automatically (the rules: read-only, no PII, efficient queries) and uses `data_catalog.md` to find data.
 It starts fresh: no history from anyone else's sessions.
 
