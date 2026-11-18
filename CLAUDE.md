@@ -13,7 +13,9 @@ This folder lets Claude query myKaarma's production databases with the user's **
   a large table.
 
 ## How to connect
-- MySQL/MariaDB: `mycli --defaults-group-suffix=_<cluster> <Database> --csv -e "<query>" < /dev/null`
+- MySQL/MariaDB: `/opt/homebrew/opt/mysql-client/bin/mysql --defaults-group-suffix=_<cluster> <Database> -B -e "<query>" < /dev/null`
+  (tab-separated output; on Intel Macs the path is `/usr/local/opt/mysql-client/bin/mysql`). Don't use `mycli`: 2.x removed
+  `--defaults-group-suffix`, so it can't pick the cluster from `~/.my.cnf`.
   (clusters: `kaardbprod`, `scheduler`, `appointment`, `communicationsaurora`, `communicationsrds`). In Python use `pymysql.connect(
   read_default_file=os.path.expanduser("~/.my.cnf"), read_default_group="client_<cluster>", database=...)`.
 - MongoDB `appointmentdb`: `pymongo.MongoClient(open(os.path.expanduser("~/.mongo/appointmentdb.uri")).read().strip())`.

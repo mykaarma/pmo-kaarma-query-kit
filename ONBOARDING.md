@@ -24,7 +24,7 @@ It starts fresh: no history from anyone else's sessions.
 ```bash
 zsh install_tools.sh
 ```
-Installs `mycli`, `mysql-client`, `mongosh` and the Python libraries `pymysql`, `pymongo`, `openpyxl`.
+Installs `mysql-client`, `mongosh` and the Python libraries `pymysql`, `pymongo`, `openpyxl`.
 
 ## 3. Add your credentials (you do this, not Claude)
 1. Copy `credentials_template.csv` to `My Credentials.csv` in the same folder.
@@ -57,7 +57,7 @@ column and index, so it can write correct queries without guessing.
   modified dates) and delivers an Excel file with a README sheet explaining every column and filter.
 - `data_catalog.md` is the shared map of where data lives. When Claude learns something new it adds it there; share
   improvements back so everyone benefits.
-- `.claude/settings.json` pre-approves read-only `mycli` / `mongosh` commands and **blocks Claude from opening your credential files**.
+- `.claude/settings.json` pre-approves read-only `mysql` / `mongosh` commands and **blocks Claude from opening your credential files**.
 - If your password changes: update `My Credentials.csv`, re-run `setup_db_logins.sh`.
 
 ## Rules
